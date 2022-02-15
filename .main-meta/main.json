@@ -1,0 +1,54 @@
+{
+    "metaDataVersion": "1.0.0",
+    "category": "com.microchip.ide.project",
+    "content": {
+        "metaDataVersion": "1.3.0",
+        "name": "com.microchip.mcu8.mplabx.project.pic16f18075-cubicle-doorbell-mplab-mcc",
+        "version": " ",
+        "displayName": "",
+        "projectName": "pic16f18075-cubicle-doorbell-mplab-mcc",
+        "shortDescription": "Use the PIC16F18075 and it s EUSART moduleto create a cubicle doorbell to get their coworker s attention when they are not directly looking at the door of their cubicle",
+        "ide": {
+            "name": "MPLAB X",
+            "semverRange": ">=6.00.0"
+        },
+        "compiler": [
+            {
+                "name": "XC8",
+                "semverRange": "^2.36.0"
+            }
+        ],
+        "dfp": {
+            "name": "",
+            "semverRange": ""
+        },
+        "configurator": {
+            "name": "",
+            "semverRange": ""
+        },
+        "device": {
+            "metaDataVersion": "1.0.0",
+            "category": "com.microchip.portal.contentRef",
+            "content": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.device",
+                "name": "PIC16F18075",
+                "versionRange": "*"
+            }
+        },
+        "author": "Jonah Lerner",
+        "peripherals": [],
+        "keywords": [],
+        "additionalData": {
+            "longDescription": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.portal.fileRef",
+                "content": {
+                    "metaDataVersion": "1.0.0",
+                    "fileName": "./README.md",
+                    "mimeType": "text/markdown"
+                }
+            }
+        }
+    }
+}
