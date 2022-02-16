@@ -44,7 +44,7 @@ Figure 1 shows the connections made between the Cap Touch Click and RN4678 Bluet
 *Figure 1 - Door Module Circuit Diagram*
 
 
-![Door Module - Wiring Diagram](images/Full_Door_Module_to_PIC_Connections.PNG) Update to include power and ground
+![Door Module - Wiring Diagram](images/Full_Door_Module_to_PIC_Connections.png) Update to include power and ground
 
 ### Desk Module Wiring
 The Desk Module includes the Adafruit NeoPixel and one RN4678 Bluetooth Click.  The Adafruit NeoPixel is used to get the attention of the person inside of the cubicle and the RN4678 Bluetooth Click is used to receive the signal from the Door Module.
@@ -62,7 +62,7 @@ Figure 3 shows the connections made between the Adafruit NeoPixel and RN4678 Blu
 *Figure 3 - Desk Module Circuit Diagram *
 
 
-![Desk Module - Wiring Diagram](images/Full_Desk_Module_to_PIC_Connections.PNG)
+![Desk Module - Wiring Diagram](images/Full_Desk_Module_to_PIC_Connections.png)
 
 
 ## Setup - Programming
