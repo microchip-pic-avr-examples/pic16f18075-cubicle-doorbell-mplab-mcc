@@ -83,7 +83,8 @@ The project file above includes all the needed and configurations for both the d
 
 *Figure 5 - Configuration List for MPLABX*
 
-**NEED TO INSERT IMAGE HERE - snip from MPLAB when all configurations have been setup**
+![Configuration List for MPLABX](images/Configuration_List_for_MPLABX.png)
+
 
 *Table 1 - Configuration List selection by Module and Free/Pro setting*
 
@@ -125,36 +126,40 @@ There are 5 functions used to control the RN4678 in this example. Each function 
 | ``` BT_connect() ```  | Connect to the device which matches the specificed MAC address (stored within the function)  |
 
 ### Programming the PIC16F18075
-**Step 1:** Connect the PICKit 4 to the PIC16F18075 as shown in Figure 7.
+**Step 1:** Connect the PICKit 4 to the PIC16F18075 as shown in Table 4.
 
-*Figure 7 - PICKit to PIC16F18075 connections (includes pin number)*
+*Table 4 - PICKit to PIC16F18075 connections*
 
-**NEED TO INSERT IMAGE HERE - same design as above **
+| Pin on PICKit 4   | Pin Function | Pin on PIC16F18075 (40-pin, PDIP)|
+| :----:            |    :----:    |         ---        |
+| 1                 | Vpp/MCLR     | 1                  |
+| 2                 | Vdd Target   | 11 or 32           |
+| 3                 | Vss (ground) | 12 or 31           |
+| 4                 | ICSPDAT      | 40                 |
+| 5                 | ICSPCLK      | 39                 |
 
-**Step 2:** Select the correct configuration as shown in Figure 8 by using Table 1 with the known Door/Desk Module and the Free/Pro setting
+**Step 2:** Select the correct configuration as shown in Figure 5 by using Table 1 with the known Door/Desk Module and the Free/Pro setting
 
-**Step 3:** Press the 'Project Properties' button to open the Project Properties window.  Select the PICKit 4 from the Tools drop-down menu as shown in Figure 9
+**Step 3:** Press the 'Project Properties' button to open the Project Properties window.  Select the PICKit 4 from the Tools drop-down menu as shown in Figure 6
 
-*Figure 9 - Select the PICKit 4 from Tools Menu*
+*Figure 6 - Select the PICKit 4 from Tools Menu*
 
-**NEED TO INSERT IMAGE HERE - snip from MPLAB when all configurations have been setup **
+![Select the PICKit 4 from Tools Menu](images/Select_the_PICKit_4_from_Tools_Menu.png)
 
-**Step 4:** Press the 'Make and Program Device' button to program the PIC16F18075 (see Figure 10).  Verify that the device was successfully programmed (see Figure 11)
+**Step 4:** Press the 'Make and Program Device' button to program the PIC16F18075 (see Figure 7).  Verify that the device was successfully programmed (see Figure 8).
 
-*Figure 10 - Make and Program Device Button*
+*Figure 7 - Make and Program Device Button*
 
-**NEED TO INSERT IMAGE HERE - snip from MPLAB when all configurations have been setup **
+![Make and Program Device Button](images/Make_and_Program_Device_Button.png)
 
-*Figure 11 - Device Programming Successful*
+*Figure 8 - Device Programming Successful*
 
-**NEED TO INSERT IMAGE HERE - snip from MPLAB when all configurations have been setup **
-
-
+![Device Programming Successful](images/Device_Programming_Successful.png)
 
 ## Operation
-After having programmed both the desk and door module circuits, the result will not not visible immediately. Once both modules have power, the desk module will initiate the ``` BT_scan() ``` function which takes about 20 seconds to complete.  After that 20 seconds is done, the 'STAT2' LED on the RN4678 Click shown in Figure 12 (in the red box) turns off.
+After having programmed both the desk and door module circuits, the result will not not visible immediately. Once both modules have power, the desk module will initiate the ``` BT_scan() ``` function which takes about 20 seconds to complete.  After that 20 seconds is done, the 'STAT2' LED on the RN4678 Click shown in Figure 9 (in the red box) turns off.
 
-*Figure 12 - RN4678 STAT2 LED*
+*Figure 9 - RN4678 STAT2 LED*
 
 **NEED TO INSERT IMAGE HERE - don't forget the red box around the STAT2 LED**
 
