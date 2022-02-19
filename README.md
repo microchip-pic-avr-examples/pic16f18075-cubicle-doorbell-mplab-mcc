@@ -3,8 +3,7 @@
 
 # Cubicle Doorbell
 
-This example shows how configure a Cap Touch Click, an Adafruit NeoPixel, and two RN4678 Bluetooth Clicks into a doorbell which allows someone to get a coworker's attention if they are not diretly looking at the door of their cubicle.
-<>
+This example shows how configure a Cap Touch Click, an Adafruit NeoPixel, and two RN4678 Bluetooth Clicks into a doorbell which allows someone to get a coworker's attention if they are not directly looking at the door of their cubicle.
 
 ## Related Documentation
 
@@ -18,9 +17,9 @@ This example shows how configure a Cap Touch Click, an Adafruit NeoPixel, and tw
 - [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) **6.00** or newer
 - [MPLAB® Xpress IDE](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xpress) (alternative to MPLAB® X IDE) <!--Does this apply to this example?-->
 - [MPLAB® XC8](http://www.microchip.com/mplab/compilers) **2.36** or a newer compiler 
-- [MPLAB® Code Configurator (MCC)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **4.1.0** or newer <!--Update/double check the version-->
-- [MPLAB® Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **1.37.25** or newer <!--Update/double check the version-->
-- [Microchip PIC1F1xxxx Series Device Support pack](https://packs.download.microchip.com/) **1.10.170** or newer Device Pack
+- [MPLAB® Code Configurator (MCC)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **5.1.0** or newer <!--Update/double check the version-->
+- [MPLAB® Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **2.0.54** or newer <!--Update/double check the version-->
+- [Microchip PIC1F1xxxx Series Device Support pack](https://packs.download.microchip.com/) **1.10.174** or newer Device Pack
 
 ## Hardware Used
 - [MPLAB® PICkit™ 4 In-Circuit Debugger](https://www.microchip.com/en-us/development-tool/PG164140)
@@ -35,7 +34,7 @@ This example shows how configure a Cap Touch Click, an Adafruit NeoPixel, and tw
 
 The Door Module includes the Cap Touch Click and one RN4678 Bluetooth Click.  The Cap Touch Click is used for capturing if someone is at the door and the RN4678 Bluetooth Click is used to send the signal to the Desk Module.
 
-The Cap Touch Click connects to the PIC16F18075 by connecting the OUT pin to any input pin. In this example, RB0 was selected as the input pin. The MOD pin on the Click determines the mode of operation and is connected to RD1. The Cap Touch Click shares the ground, both pins, with the PIC16F18075 but does not share the 5VDC power.
+The Cap Touch Click connects to the PIC16F18075 by connecting the OUT pin to any input pin. In this example, RB0 was selected as the input pin. The MOD pin on the Click determines the mode of operation and is connected to RD1. The Cap Touch Click shares the ground, both pins, with the PIC16F18075 but does not share the 3.3VDC power.
 
 The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins while the RTS, RXD, RST, and SW_RST pins are configured as output pins. The RN4678 Bluetooth Click shares both the power (3.3VDC) and ground pins with the PIC16F18075. 
 
@@ -51,13 +50,16 @@ The Desk Module includes the Adafruit NeoPixel and one RN4678 Bluetooth Click.  
 
 The Adafruit NeoPixel connects to the PIC16F18075 by connecting the DIN pin to any output pin. In this example, RA0 was selected as the output pin. A 4-pin header will need to be soldered onto the back of the Adafruit NeoPixel before connecting to the PIC16F18075.  Figure 2 shows where to connect the 4-pin header (see the red box).  The Adafruit NeoPixel shares the ground, both pins, with the PIC16F18075 but does not share the 5VDC power. 
 
-The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins while the RTS, RXD, RST, and SW_RST pins are configured as output pins. The RN4678 Bluetooth Click shares both the power (3.3VDC) and ground pins, both pins, with the PIC16F18075. 
-
-Figure 3 shows the connections made between the Adafruit NeoPixel and RN4678 Bluetooth Click and the PIC16F18075 for the desk module.
 
 *Figure 2 - Adafruit NeoPixel - back side*
 
 **NEED TO INSERT IMAGE HERE - include a red box around the pins that need to be soldered to**
+
+The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins while the RTS, RXD, RST, and SW_RST pins are configured as output pins. The RN4678 Bluetooth Click shares both the power (3.3VDC) and ground pins, both pins, with the PIC16F18075. 
+
+Figure 3 shows the connections made between the Adafruit NeoPixel and RN4678 Bluetooth Click and the PIC16F18075 for the desk module.
+
+
 
 *Figure 3 - Desk Module Circuit Diagram *
 
@@ -79,7 +81,7 @@ Figure 3 shows the connections made between the Adafruit NeoPixel and RN4678 Blu
 
 ### Program Code, Configurations, and Functions Overview
 
-The project file above includes all the needed and configurations for both the door and desk modules.  There are two main.c files that contain the driving code for each of the modules.  By selecting the configuration that matches the module and free/pro status (see Table 1 and Figure 5 below), one of the main.c files will be excluded from being programmed. This exclusion results in the correct main.c file being programmed to the device for the selected module.
+The project file above includes all the needed code and configurations for both the Door and Desk modules.  There are two main.c files that contain the driving code for each of the modules.  By selecting the configuration that matches the module and free/pro status (see Table 1 and Figure 5 below), one of the main.c files will be excluded from being programmed. This exclusion results in the correct main.c file being programmed to the device for the selected module.
 
 *Figure 5 - Configuration List for MPLABX*
 
@@ -95,7 +97,7 @@ The project file above includes all the needed and configurations for both the d
 | Desk   | Pro        | pro_desk      |
 | Desk   | Free        | free_desk      |
 
-Each of the main.c files will use a series of functions that are built utilizing the existing APIs generated from the MCC configuration.  Table 2 and Table 3 below each give an overview of the functions used for either the NeoPixel or RN4678 Bluetooth Click. 
+Each of the main.c files will use a series of functions that are built utilizing the existing APIs generated from the Melody configuration.  Table 2 and Table 3 below each give an overview of the functions used for either the NeoPixel or RN4678 Bluetooth Click. 
 
 #### NeoPixel Functions
 There are 7 functions used to control the NeoPixel in this example. Each function and description is listed in Table 2.
@@ -178,7 +180,7 @@ Once the scan completes and the STAT2 LED turns off on each RN4678 Bluetooth Cli
 
 The RN4678 Bluetooth Click has many different settings that are not described within this example.  For any additional setting changes the following steps should be followed:
      
-1. Make sure that all the RN4678 Bluetooth Click pins are connected to the PIC16F18075 (see Figure 4 or Figure 5 above)
+1. Make sure that all the RN4678 Bluetooth Click pins are connected to the PIC16F18075 (see Figure 1 or Figure 3 above)
 
 2. Disconnect the TXD and RXD connections between the PIC16F18075 and the RN4678 Bluetooth Click.
 
@@ -187,4 +189,4 @@ The RN4678 Bluetooth Click has many different settings that are not described wi
 4. Now follow the instructions used with the command guide for changing any of the settings.  The command guide can be found above under the link labeled 'RN4678 User Guide'.
      
 ## Summary
-This example has shown how to use a Cap Touch Click, an AdaFruit NeoPixel, and 2 RN4678 Bluetooth Click modules to create a Cubicle Doorbell system that uses the PIC16F18075 device within the MCC tool in MPLABX.
+This example has shown how to use a Cap Touch Click, an AdaFruit NeoPixel, and 2 RN4678 Bluetooth Click modules to create a Cubicle Doorbell system that uses the PIC16F18075 device.
