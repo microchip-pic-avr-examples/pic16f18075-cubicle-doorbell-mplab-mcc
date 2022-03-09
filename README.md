@@ -54,7 +54,7 @@ The Adafruit NeoPixel connects to the PIC16F18075 by connecting the DIN pin to a
 
 *Figure 2 - Adafruit NeoPixel - back side*
 
-**NEED TO INSERT IMAGE HERE - include a red box around the pins that need to be soldered to**
+![Adafruit NeoPixel - back side](images/Adafruit_NeoPixel_back_side.png)
 
 The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins while the RTS, RXD, RST, and SW_RST pins are configured as output pins. The RN4678 Bluetooth Click shares both the power (3.3VDC) and ground pins, both pins, with the PIC16F18075. 
 
@@ -164,18 +164,17 @@ After having programmed both the desk and door module circuits, the result will 
 
 *Figure 9 - RN4678 STAT2 LED*
 
-**NEED TO INSERT IMAGE HERE - don't forget the red box around the STAT2 LED**
-
+![RN4678 STAT2 LED](images/RN4678_Click.png)
 
 *Scan completing and LEDs turning off*
 
-**NEED TO INSERT VIDEO HERE - wait until all new configurations have been tested**
+![Scan completing and LEDs turning off](images/Scan_completing_and_LEDs_turning_off.gif)
 
 Once the scan completes and the STAT2 LED turns off on each RN4678 Bluetooth Click, then when the Cap Touch Click is pressed on the door module, the AdaFruit NeoPixel will flash on the desk module.
 
 *Cap Touch Click being pressed and the AdaFruit NeoPixel flashing*
 
-**NEED TO INSERT VIDEO HERE - wait until all new configurations have been tested**
+![Cap Touch Click being Pressed and the Adafruit NeoPixel flashing](images/Cap_Touch_click_pressed_and_NeoPixel_Flashing.gif)
 
 ### How to change any other Bluetooth settings
 
