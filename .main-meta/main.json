@@ -7,7 +7,7 @@
         "version": " ",
         "displayName": "",
         "projectName": "pic16f18075-cubicle-doorbell-mplab-mcc",
-        "shortDescription": "Use the PIC16F18075 and it s EUSART moduleto create a cubicle doorbell to get their coworker s attention when they are not directly looking at the door of their cubicle",
+        "shortDescription": "Use the PIC16F18075 and its EUSART module to create a Cubicle Doorbell to get a coworker's attention when they are not directly looking at the door of their cubicle",
         "ide": {
             "name": "MPLAB X",
             "semverRange": ">=6.00.0"
@@ -19,12 +19,12 @@
             }
         ],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "PIC16F1xxxx_DFP",
+            "semverRange": "^1.10.174"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": "^5.1.0"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -37,8 +37,9 @@
             }
         },
         "author": "Jonah Lerner",
-        "peripherals": [],
-        "keywords": [],
+        "subcategories": ["Peripherals", "EUSART"],
+        "peripherals": ["EUSART"],
+        "keywords": ["EUSART", "Bluetooth", "LED", "Capacitive Touch", "Cubicle Doorbell"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
