@@ -20,26 +20,6 @@
 */
 #include "mcc_generated_files/system/system.h"
 
-/*********RN4678 BLUETOOTH FUNCTIONS************/
-
-//Set initial conditions for RN4678 Click
-void BT_initialConditions(void){
-    LATAbits.LATA1 = LOW;
-    LATDbits.LATD0 = LOW;
-    LATBbits.LATB5 = HIGH; 
-}
-//Put the RN4678 Click into a state where is it able to receive EUSART data
-void BT_initialize(void){
-    __delay_ms(15);
-    LATAbits.LATA1 = HIGH;
-    __delay_ms(40);
-    LATDbits.LATD0 = HIGH;
-    __delay_ms(435);
-    LATBbits.LATB5 = LOW; 
-    __delay_ms(40);  
-}
-//Sends the '$$$' command over EUSART which enters the RN4678 Click into Command Mode
-
 /*
     Main application
 */
@@ -47,20 +27,8 @@ void BT_initialize(void){
 int main(void)
 {
     SYSTEM_Initialize();
-    BT_initialConditions();
-    BT_initialize();
 
-    uint8_t payload = 0;
-    
-    while (1)
+    while(1)
     {
-        if (PORTBbits.RB0 == HIGH){ 
-            __delay_ms(10);
-            payload = '1';
-            EUSART1_Write(payload);
-            __delay_ms(10);
-        }
-        else{
-        }
     }    
 }

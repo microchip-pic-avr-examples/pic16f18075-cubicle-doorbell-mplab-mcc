@@ -15,7 +15,19 @@
             <sourceRootList/>
             <confList>
                 <confElem>
-                    <name>default</name>
+                    <name>pro_door</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>pro_desk</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>free_door</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>free_desk</name>
                     <type>2</type>
                 </confElem>
             </confList>
