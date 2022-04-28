@@ -19,7 +19,7 @@ This example shows how configure a Cap Touch Click, an Adafruit NeoPixel, and tw
 - [MPLAB® Xpress IDE](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xpress) (alternative to MPLAB® X IDE) <!--Does this apply to this example?-->
 - [MPLAB® XC8](http://www.microchip.com/mplab/compilers) **2.36** or a newer compiler 
 - [MPLAB® Code Configurator (MCC)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **5.1.0** or newer <!--Update/double check the version-->
-- [MPLAB® Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **2.0.54** or newer <!--Update/double check the version-->
+- [MPLAB® Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **2.1.12** or newer <!--Update/double check the version-->
 - [Microchip PIC16F1xxxx Series Device Support pack](https://packs.download.microchip.com/) **1.10.174** or newer Device Pack
 
 ## Hardware Used

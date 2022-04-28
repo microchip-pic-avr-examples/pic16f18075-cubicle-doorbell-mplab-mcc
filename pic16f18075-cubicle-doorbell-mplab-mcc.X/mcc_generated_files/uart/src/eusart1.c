@@ -1,24 +1,13 @@
 /**
-  EUSART1 Generated Driver File
-
-  @Company
-    Microchip Technology Inc.
-
-  @File Name
-    eusart1.c
-
-  @Summary
-    This is the generated driver implementation file for the EUSART1 driver using CCL
-
-  @Description
-    This source file provides APIs for EUSART1.
-    Generation Information :
-        Product Revision  :  CCL - 1.8.2
-        Device            :  PIC18F47Q43
-        Driver Version    :  2.1.0
-    The generated drivers are tested against the following:
-        Compiler          :  XC8 v2.2
-        MPLAB 	          :  Standalone
+  * EUSART1 Generated Driver File
+  *
+  * @file eusart1.c
+  *
+  * @ingroup eusart1
+  *
+  * @brief This file contains the driver code for EUSART1 module.
+  *
+  * @version EUSART1 Driver Version 2.1.1
 */
 
 /*

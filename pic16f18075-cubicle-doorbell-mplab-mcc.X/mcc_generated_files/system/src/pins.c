@@ -112,8 +112,8 @@ void PIN_MANAGER_Initialize(void)
     /**
     PPS registers
     */
-    RC6PPS = 0x0E;  //RC6->EUSART1:TX1;  
     RX1PPS = 0x17; //RC7->EUSART1:RX1;
+    RC6PPS = 0x0E;  //RC6->EUSART1:TX1;  
 
    /**
     IOCx registers 
@@ -137,7 +137,6 @@ void PIN_MANAGER_Initialize(void)
 void PIN_MANAGER_IOC(void)
 {
 }
-
 /**
  End of File
 */
