@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f18075-cubicle-doorbell-mplab-mcc",
-        "version": " ",
+        "version": "1.0.0",
         "displayName": "",
         "projectName": "pic16f18075-cubicle-doorbell-mplab-mcc",
         "shortDescription": "Use the PIC16F18075 and its EUSART module to create a Cubicle Doorbell to get a coworker's attention when they are not directly looking at the door of their cubicle",
