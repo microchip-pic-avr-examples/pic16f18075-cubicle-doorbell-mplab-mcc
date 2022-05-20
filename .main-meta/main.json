@@ -39,7 +39,7 @@
         "author": "Jonah Lerner",
         "subcategories": ["Peripherals", "EUSART"],
         "peripherals": ["EUSART"],
-        "keywords": ["EUSART", "Bluetooth", "LED", "Capacitive Touch", "Cubicle Doorbell"],
+        "keywords": ["EUSART", "Bluetooth", "LED", "Capacitive Touch"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
