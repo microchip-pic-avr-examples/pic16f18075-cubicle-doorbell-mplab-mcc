@@ -56,7 +56,7 @@ The Adafruit NeoPixel connects to the PIC16F18075 by connecting the DIN pin to a
 
 ![Adafruit NeoPixel - back side](images/Adafruit_NeoPixel_back_side.png)
 
-The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins while the RTS, RXD, RST, and SW_RST pins are configured as output pins. The RN4678 Bluetooth Click shares both the power (3.3VDC) and ground pins, both pins, with the PIC16F18075. 
+The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins while the RTS, RXD, RST, and SW_RST pins are configured as output pins.
 
 Figure 3 shows the connections made between the Adafruit NeoPixel and RN4678 Bluetooth Click and the PIC16F18075 for the desk module.
 
