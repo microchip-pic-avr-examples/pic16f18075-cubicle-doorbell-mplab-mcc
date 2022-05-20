@@ -62,7 +62,7 @@ Figure 3 shows the connections made between the Adafruit NeoPixel and RN4678 Blu
 
 
 
-*Figure 3 - Desk Module Circuit Diagram *
+*Figure 3 - Desk Module Circuit Diagram*
 
 
 ![Desk Module - Wiring Diagram](images/Full_Desk_Module_to_PIC_Connections.png)
