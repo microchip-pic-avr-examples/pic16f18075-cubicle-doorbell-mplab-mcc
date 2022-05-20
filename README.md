@@ -143,7 +143,7 @@ There are 5 functions used to control the RN4678 in this example. Each function 
 
 **Step 2:** Select the correct configuration as shown in Figure 5 by using Table 1 with the known Door/Desk Module and the Free/Pro setting
 
-**Step 3:** Press the 'Project Properties' button to open the Project Properties window.  Select the PICKit 4 from the Tools drop-down menu as shown in Figure 6
+**Step 3:** Right click on the project name in MPLABX and select the "Project Properties' button to open the Project Properties window.  Select the PICKit 4 from the Tools drop-down menu as shown in Figure 6
 
 *Figure 6 - Select the PICKit 4 from Tools Menu*
 
