@@ -8,7 +8,7 @@ This example shows how to configure the MikroElektronika Cap Touch Click Board, 
 
 ## Related Documentation
 
-- [PIC16F18075 Data Sheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47-57Q43-Data-Sheet-DS40002147E.pdf) <!--Is this available online yet?-->
+- [PIC16F18075 Data Sheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC16F18054-55-74-75-28-40-Pin-Micorocontroller-Data-Sheet-40002338.pdf)
 - [PIC16F18075 Family Product Page](https://www.microchip.com/wwwproducts/en/PIC16F18075)
 - [RN4678 User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/RN4678-Bluetooth-Dual-Mode-Module-Command-Reference-User-Guide-DS50002506C.pdf)
 
@@ -18,8 +18,8 @@ This example shows how to configure the MikroElektronika Cap Touch Click Board, 
 - [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) **6.00** or newer
 - [MPLAB® Xpress IDE](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xpress) (alternative to MPLAB® X IDE) <!--Does this apply to this example?-->
 - [MPLAB® XC8](http://www.microchip.com/mplab/compilers) **2.36** or a newer compiler 
-- [MPLAB® Code Configurator (MCC)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **5.1.0** or newer <!--Update/double check the version-->
-- [MPLAB® Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **2.1.12** or newer <!--Update/double check the version-->
+- [MPLAB® Code Configurator (MCC)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **5.1.0** or newer 
+- [MPLAB® Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **2.1.12** or newer 
 - [Microchip PIC16F1xxxx Series Device Support pack](https://packs.download.microchip.com/) **1.10.174** or newer Device Pack
 
 ## Hardware Used
@@ -31,6 +31,9 @@ This example shows how to configure the MikroElektronika Cap Touch Click Board, 
 - Jumper wires
 
 ## Setup - Wiring
+
+The hardware for this code example consists of two separate parts connected wirelessly using their respective Bluetooth modules.  The two parts are the Door Module which would serve as the traditional doorbell in this demonstration, and the Desk Module which would serve as the traditional door chime in the demonstration.
+
 ### Door Module Wiring
 
 The Door Module includes the Cap Touch Click and one RN4678 Bluetooth Click.  The Cap Touch Click is used for capturing if someone is at the door when they press the touch button, and the RN4678 Bluetooth Click is used to send the signal to the Desk Module.
@@ -39,7 +42,7 @@ The Cap Touch Click connects to the PIC16F18075 by connecting the OUT pin on the
 
 The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins on the PIC16F18075 while the RTS, RXD, RST, and SW_RST pins are configured as output pins on the PIC16F18075.
 
-Figure 1 shows the connections made between the Cap Touch Click and RN4678 Bluetooth Click and the PIC16F18075 for the door module.
+Figure 1 shows the connections made between the Cap Touch Click, the RN4678 Bluetooth Click, and the PIC16F18075 for the door module.
 
 *Figure 1 - Door Module Circuit Diagram*
 
@@ -55,6 +58,8 @@ The Adafruit NeoPixel connects to the PIC16F18075 by connecting the DIN pin to a
 *Figure 2 - Adafruit NeoPixel - back side*
 
 ![Adafruit NeoPixel - back side](images/Adafruit_NeoPixel_back_side.png)
+
+Note: The image above has the power pin labeled as "5VDC", however for this demonstration it will be run at 3.3VDC.
 
 The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins while the RTS, RXD, RST, and SW_RST pins are configured as output pins.
 
@@ -101,7 +106,7 @@ The project file above includes all the needed code and configurations for both 
 Each of the main.c files will use a series of functions that are built utilizing the existing APIs generated from the Melody configuration.  Table 2 and Table 3 below each give an overview of the functions used for either the NeoPixel or RN4678 Bluetooth Click. 
 
 #### NeoPixel Functions
-There are 7 functions used to control the NeoPixel in this example. Each function and description is listed in Table 2.
+There are 7 custom-written functions used to control the NeoPixel in this example. Each function and description is listed in Table 2. These functions can be found within the Desk_Module_main.c file.
 
 *Table 2 - NeoPixel Functions and Descriptions*
 
@@ -116,7 +121,7 @@ There are 7 functions used to control the NeoPixel in this example. Each functio
 | ``` RED_BLINK_500ms ```| All 8 LEDs blink Red and then turn off at a 500ms interval        |
 
 #### RN4678 Functions
-There are 5 functions used to control the RN4678 in this example. Each function and description is listed in Table 3.
+There are 5 custom written functions used to control the RN4678 in this example. Each function and description is listed in Table 3. These functions can be found within both the Desk_Module_main.c file and the Door_Module_main.c file.
   
 *Table 3 - RN4678 Functions and Descriptions*
 
@@ -140,6 +145,7 @@ There are 5 functions used to control the RN4678 in this example. Each function 
 | 3                 | Vss (ground) | 12 or 31           |
 | 4                 | ICSPDAT      | 40                 |
 | 5                 | ICSPCLK      | 39                 |
+| 6                 |   NC (No Connect)         |                    |
 
 **Step 2:** Select the correct configuration as shown in Figure 5 by using Table 1 with the known Door/Desk Module and the Free/Pro setting
 
@@ -149,7 +155,7 @@ There are 5 functions used to control the RN4678 in this example. Each function 
 
 ![Select the PICKit 4 from Tools Menu](images/Select_the_PICKit_4_from_Tools_Menu.png)
 
-**Step 4:** Press the 'Make and Program Device' button to program the PIC16F18075 (see Figure 7).  Verify that the device was successfully programmed (see Figure 8).
+**Step 4:** Left click the 'Make and Program Device' button to program the PIC16F18075 (see Figure 7).  Verify that the device was successfully programmed (see Figure 8).
 
 *Figure 7 - Make and Program Device Button*
 
@@ -178,7 +184,7 @@ Once the scan completes and the STAT2 LED turns off on each RN4678 Bluetooth Cli
 
 ### How to change any other Bluetooth settings
 
-The RN4678 Bluetooth Click has many different settings that are not described within this example.  For any additional setting changes the following steps should be followed:
+The RN4678 Bluetooth Click has many different settings that are not described within this example.  For any additional setting changes, the following steps should be followed:
      
 1. Make sure that all the RN4678 Bluetooth Click pins are connected to the PIC16F18075 (see Figure 1 or Figure 3 above)
 
