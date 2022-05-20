@@ -49,7 +49,7 @@ Figure 1 shows the connections made between the Cap Touch Click and RN4678 Bluet
 ### Desk Module Wiring
 The Desk Module includes the Adafruit NeoPixel and one RN4678 Bluetooth Click.  The Adafruit NeoPixel is used to get the attention of the person inside of the cubicle and the RN4678 Bluetooth Click is used to receive the signal from the Door Module.
 
-The Adafruit NeoPixel connects to the PIC16F18075 by connecting the DIN pin to any output pin. In this example, RA0 was selected as the output pin. A 4-pin header will need to be soldered onto the back of the Adafruit NeoPixel before connecting to the PIC16F18075.  Figure 2 shows where to connect the 4-pin header (see the red box).  The Adafruit NeoPixel shares the ground, both pins, with the PIC16F18075 but does not share the 5VDC power. 
+The Adafruit NeoPixel connects to the PIC16F18075 by connecting the DIN pin to any output pin of the microcontroller. In this example, RA0 was selected as the output pin. A 4-pin header will need to be soldered onto the back of the Adafruit NeoPixel before connecting to the PIC16F18075.  Figure 2 shows where to connect the 4-pin header (see the red box).
 
 
 *Figure 2 - Adafruit NeoPixel - back side*
