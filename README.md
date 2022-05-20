@@ -3,7 +3,7 @@
 
 # Cubicle Doorbell
 
-This example shows how configure a Cap Touch Click, an Adafruit NeoPixel, and two RN4678 Bluetooth Clicks into a doorbell which allows someone to get a coworker's attention if they are not directly looking at the door of their cubicle.
+This example shows how to configure the MikroElektronika Cap Touch Click Board, an Adafruit NeoPixel LED strip, and two RN4678 Bluetooth Click Boards into a doorbell which allows someone to get a coworker's attention if they are not directly looking at the door of their cubicle.
 
 
 ## Related Documentation
