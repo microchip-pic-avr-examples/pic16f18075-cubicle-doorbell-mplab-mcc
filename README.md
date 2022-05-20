@@ -37,7 +37,7 @@ The Door Module includes the Cap Touch Click and one RN4678 Bluetooth Click.  Th
 
 The Cap Touch Click connects to the PIC16F18075 by connecting the OUT pin to any input pin. In this example, RB0 was selected as the input pin. The MOD pin on the Click determines the mode of operation and is connected to RD1. The Cap Touch Click shares the ground, both pins, with the PIC16F18075 but does not share the 3.3VDC power.
 
-The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins while the RTS, RXD, RST, and SW_RST pins are configured as output pins. The RN4678 Bluetooth Click shares both the power (3.3VDC) and ground pins with the PIC16F18075. 
+The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins on the PIC16F18075 while the RTS, RXD, RST, and SW_RST pins are configured as output pins on the PIC16F18075.
 
 Figure 1 shows the connections made between the Cap Touch Click and RN4678 Bluetooth Click and the PIC16F18075 for the door module.
 
