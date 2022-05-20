@@ -129,7 +129,7 @@ There are 5 functions used to control the RN4678 in this example. Each function 
 | ``` BT_connect() ```  | Connect to the device which matches the specificed MAC address (stored within the function)  |
 
 ### Programming the PIC16F18075
-**Step 1:** Connect the PICKit 4 to the PIC16F18075 as shown in Table 4.
+**Step 1:** Connect the PICKit 4 to the PIC16F18075 using the standard ICSP connections as shown in Table 4.
 
 *Table 4 - PICKit to PIC16F18075 connections*
 
