@@ -160,7 +160,7 @@ There are 5 functions used to control the RN4678 in this example. Each function 
 ![Device Programming Successful](images/Device_Programming_Successful.png)
 
 ## Operation
-After having programmed both the desk and door module circuits, the result will not not visible immediately. Once both modules have power, the desk module will initiate the ``` BT_scan() ``` function which takes about 20 seconds to complete.  After that 20 seconds is done, the 'STAT2' LED on the RN4678 Click shown in Figure 9 (in the red box) turns off.
+After programming both the Desk and Door modules, the result will not not visible immediately. Once both modules are programmed and have power supplied, the desk module will first initiate the ``` BT_scan() ``` function which takes about 20 seconds to complete.  After the ``` BT_scan() ``` function has been completed about 20 seconds later, the 'STAT2' LED on the RN4678 Click shown in Figure 9 (in the red box) turns off.
 
 *Figure 9 - RN4678 STAT2 LED*
 
