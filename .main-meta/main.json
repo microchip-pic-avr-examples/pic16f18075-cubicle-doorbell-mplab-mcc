@@ -10,7 +10,7 @@
         "shortDescription": "Use the PIC16F18075 and its EUSART module to create a Cubicle Doorbell to get a coworker's attention when they are not directly looking at the door of their cubicle",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ">=6.00.0"
+            "semverRange": ">=6.0.0"
         },
         "compiler": [
             {
