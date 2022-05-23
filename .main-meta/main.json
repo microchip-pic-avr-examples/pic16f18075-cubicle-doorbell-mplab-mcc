@@ -37,9 +37,8 @@
             }
         },
         "author": "Jonah Lerner",
-        "subcategories": ["Peripherals", "EUSART"],
         "peripherals": ["EUSART"],
-        "keywords": ["EUSART", "Bluetooth", "LED", "Capacitive Touch"],
+        "keywords": ["EUSART", "Bluetooth", "LED", "Capacitive Touch", "MCC"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
