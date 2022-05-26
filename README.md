@@ -10,7 +10,9 @@ This example shows how to configure the MikroElektronika Cap Touch Click Board, 
 
 - [PIC16F18075 Data Sheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC16F18054-55-74-75-28-40-Pin-Micorocontroller-Data-Sheet-40002338.pdf)
 - [PIC16F18075 Family Product Page](https://www.microchip.com/wwwproducts/en/PIC16F18075)
+- [Wireless Cubicle Doorbell Application Note](https://www.microchip.com/en-us/appliation-notes/an3313)
 - [RN4678 User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/RN4678-Bluetooth-Dual-Mode-Module-Command-Reference-User-Guide-DS50002506C.pdf)
+
 
 
 ## Software Used
@@ -50,7 +52,7 @@ Figure 1 shows the connections made between the Cap Touch Click, the RN4678 Blue
 ![Door Module - Wiring Diagram](images/Full_Door_Module_to_PIC_Connections.png)
 
 ### Desk Module Wiring
-The Desk Module includes the Adafruit NeoPixel and one RN4678 Bluetooth Click.  The Adafruit NeoPixel is used to get the attention of the person inside of the cubicle and the RN4678 Bluetooth Click is used to receive the signal from the Door Module.
+The Desk Module includes the Adafruit NeoPixel and one RN4678 Bluetooth Click. The RN4678 Bluetooth Click is used to receive the signal from the Door Module when somebody presses the capacitive touch button.  The Adafruit NeoPixel is used to get the attention of the person inside of the cubicle when a signal is received from the Bluetooth module indicating that somebody presses the capacitice touch button.
 
 The Adafruit NeoPixel connects to the PIC16F18075 by connecting the DIN pin to any output pin of the microcontroller. In this example, RA0 was selected as the output pin. A 4-pin header will need to be soldered onto the back of the Adafruit NeoPixel before connecting to the PIC16F18075.  Figure 2 shows where to connect the 4-pin header (see the red box).
 
@@ -87,9 +89,14 @@ Figure 3 shows the connections made between the Adafruit NeoPixel and RN4678 Blu
 
 ### Program Code, Configurations, and Functions Overview
 
-The project file above includes all the needed code and configurations for both the Door and Desk modules.  There are two main.c files that contain the driving code for each of the modules.  By selecting the configuration that matches the module and free/pro status (see Table 1 and Figure 5 below), one of the main.c files will be excluded from being programmed. This exclusion results in the correct main.c file being programmed to the device for the selected module, so that the same MPLABX project can be used for both the Door module and Desk module.
+The project file above includes all the needed code and configurations for both the Door and Desk modules.  There are two main.c files that contain the driving code for each of the modules (Figure 5 below).  By selecting the configuration that matches the module and free/pro status (see Table 1 and Figure 6 below), one of the main.c files will be excluded from being programmed (gray .c file in Figure 5). This exclusion results in the correct main.c file being programmed to the device for the selected module, so that the same MPLABX project can be used for both the Door module and Desk module.
 
-*Figure 5 - Configuration List for MPLABX*
+*Figure 5 - Main.c File Organization using pro_door configuration setting*
+
+![Pro Door Main.c visual](images/pro_door_main-c_visual.png)
+
+
+*Figure 6 - Configuration List for MPLABX*
 
 ![Configuration List for MPLABX](images/Configuration_List_for_MPLABX.png)
 
@@ -149,26 +156,26 @@ There are 5 custom written functions used to control the RN4678 in this example.
 
 **Step 2:** Select the correct configuration as shown in Figure 5 by using Table 1 with the known Door/Desk Module and the Free/Pro setting
 
-**Step 3:** Right click on the project name in MPLABX and select the "Project Properties' button to open the Project Properties window.  Select the PICKit 4 from the Tools drop-down menu as shown in Figure 6
+**Step 3:** Right click on the project name in MPLABX and select the "Project Properties' button to open the Project Properties window.  Select the PICKit 4 from the Tools drop-down menu as shown in Figure 7
 
-*Figure 6 - Select the PICKit 4 from Tools Menu*
+*Figure 7 - Select the PICKit 4 from Tools Menu*
 
 ![Select the PICKit 4 from Tools Menu](images/Select_the_PICKit_4_from_Tools_Menu.png)
 
-**Step 4:** Left click the 'Make and Program Device' button to program the PIC16F18075 (see Figure 7).  Verify that the device was successfully programmed (see Figure 8).
+**Step 4:** Left click the 'Make and Program Device' button to program the PIC16F18075 (see Figure 8).  Verify that the device was successfully programmed (see Figure 9).
 
-*Figure 7 - Make and Program Device Button*
+*Figure 8 - Make and Program Device Button*
 
 ![Make and Program Device Button](images/Make_and_Program_Device_Button.png)
 
-*Figure 8 - Device Programming Successful*
+*Figure 9 - Device Programming Successful*
 
 ![Device Programming Successful](images/Device_Programming_Successful.png)
 
 ## Operation
-After programming both the Desk and Door modules, the result will not not visible immediately. Once both modules are programmed and have power supplied, the desk module will first initiate the ``` BT_scan() ``` function which takes about 20 seconds to complete.  After the ``` BT_scan() ``` function has been completed about 20 seconds later, the 'STAT2' LED on the RN4678 Click shown in Figure 9 (in the red box) turns off.
+After programming both the Desk and Door modules, the result will not not visible immediately. Once both modules are programmed and have power supplied, the desk module will first initiate the ``` BT_scan() ``` function which takes about 20 seconds to complete.  After the ``` BT_scan() ``` function has been completed about 20 seconds later, the 'STAT2' LED on the RN4678 Click shown in Figure 10 (in the red box) turns off.
 
-*Figure 9 - RN4678 STAT2 LED*
+*Figure 10 - RN4678 STAT2 LED*
 
 ![RN4678 STAT2 LED](images/RN4678_Click.png)
 
