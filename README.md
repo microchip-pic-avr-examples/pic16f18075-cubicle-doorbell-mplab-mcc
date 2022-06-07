@@ -52,7 +52,7 @@ Figure 1 shows the connections made between the Cap Touch Click, the RN4678 Blue
 ![Door Module - Wiring Diagram](images/Full_Door_Module_to_PIC_Connections.png)
 
 ### Desk Module Wiring
-The Desk Module includes the Adafruit NeoPixel and one RN4678 Bluetooth Click. The RN4678 Bluetooth Click is used to receive the signal from the Door Module when somebody presses the capacitive touch button.  The Adafruit NeoPixel is used to get the attention of the person inside of the cubicle when a signal is received from the Bluetooth module indicating that somebody presses the capacitice touch button.
+The Desk Module includes the Adafruit NeoPixel and one RN4678 Bluetooth Click. The RN4678 Bluetooth Click is used to receive the signal from the Door Module when somebody presses the capacitive touch button.  The Adafruit NeoPixel is used to get the attention of the person inside of the cubicle when a signal is received from the Bluetooth module indicating that somebody pressed the capacitive touch button.
 
 The Adafruit NeoPixel connects to the PIC16F18075 by connecting the DIN pin to any output pin of the microcontroller. In this example, RA0 was selected as the output pin. A 4-pin header will need to be soldered onto the back of the Adafruit NeoPixel before connecting to the PIC16F18075.  Figure 2 shows where to connect the 4-pin header (see the red box).
 
@@ -183,7 +183,7 @@ After programming both the Desk and Door modules, the result will not not visibl
 
 ![Scan completing and LEDs turning off](images/Scan_completing_and_LEDs_turning_off.gif)
 
-Once the scan completes and the STAT2 LED turns off on each RN4678 Bluetooth Click, then when the Cap Touch Click is pressed on the door module, the AdaFruit NeoPixel will flash on the desk module.
+Once the scan completes and the STAT2 LED turns off on each RN4678 Bluetooth Click, whenever the Cap Touch Click is pressed on the door module the AdaFruit NeoPixel will flash on the desk module.
 
 *Cap Touch Click being pressed and the AdaFruit NeoPixel flashing*
 
