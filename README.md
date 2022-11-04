@@ -10,7 +10,7 @@ This example shows how to configure the MikroElektronika Cap Touch Click Board, 
 
 - [PIC16F18075 Data Sheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC16F18054-55-74-75-28-40-Pin-Micorocontroller-Data-Sheet-40002338.pdf)
 - [PIC16F18075 Family Product Page](https://www.microchip.com/wwwproducts/en/PIC16F18075)
-- [Wireless Cubicle Doorbell Application Note](https://www.microchip.com/en-us/appliation-notes/an3313)
+- [Wireless Cubicle Doorbell Application Note](https://www.microchip.com/en-us/application-notes/an3313)
 - [RN4678 User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/RN4678-Bluetooth-Dual-Mode-Module-Command-Reference-User-Guide-DS50002506C.pdf)
 
 
@@ -18,18 +18,18 @@ This example shows how to configure the MikroElektronika Cap Touch Click Board, 
 ## Software Used
 
 - [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) **6.00** or newer
-- [MPLAB® Xpress IDE](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xpress) (alternative to MPLAB® X IDE) <!--Does this apply to this example?-->
-- [MPLAB® XC8](http://www.microchip.com/mplab/compilers) **2.36** or a newer compiler 
-- [MPLAB® Code Configurator (MCC)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **5.1.0** or newer 
-- [MPLAB® Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **2.1.12** or newer 
+- [MPLAB Xpress IDE](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xpress) (alternative to MPLAB® X IDE) 
+- [MPLAB XC8](http://www.microchip.com/mplab/compilers) **2.36** or a newer compiler 
+- [MPLAB Code Configurator (MCC)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **5.1.0** or newer 
+- [MPLAB Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **2.1.12** or newer 
 - [Microchip PIC16F1xxxx Series Device Support pack](https://packs.download.microchip.com/) **1.10.174** or newer Device Pack
 
 ## Hardware Used
-- [MPLAB® PICkit™ 4 In-Circuit Debugger](https://www.microchip.com/en-us/development-tool/PG164140)
+- [PIC16F18075](https://www.microchip.com/en-us/product/pic16f18075) x2
+- [Curiosity HPC Development Board](https://www.microchip.com/en-us/development-tool/dm164136) x2
+- [RN4678 Bluetooth Click](https://www.mikroe.com/rn4678-click) x2
 - [Cap Touch Click](https://www.mikroe.com/cap-touch-click)
 - [Adafruit NeoPixel](https://www.adafruit.com/product/1426)
-- [RN4678 Bluetooth Click](https://www.mikroe.com/rn4678-click) x2
-- Large Breadboard x2
 - Jumper wires
 
 ## Setup - Wiring
@@ -40,39 +40,34 @@ The hardware for this code example consists of two separate parts connected wire
 
 The Door Module includes the Cap Touch Click and one RN4678 Bluetooth Click.  The Cap Touch Click is used for capturing if someone is at the door when they press the touch button, and the RN4678 Bluetooth Click is used to send the signal to the Desk Module.
 
-The Cap Touch Click connects to the PIC16F18075 by connecting the OUT pin on the Click board to an input pin of the microcontroller. In this example, RB0 was selected as the input pin. The MOD pin on the Click board determines the mode of operation and is connected to RD1 of the PIC16F18075.
+The Cap Touch Click connects to the PIC16F18075 by connecting the OUT pin on the Click board to an input pin (RB0) of the microcontroller. The MOD pin on the Click board determines the mode of operation (Fast / low power mode) and is connected to RD1 of the PIC16F18075.
 
-The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins on the PIC16F18075 while the RTS, RXD, RST, and SW_RST pins are configured as output pins on the PIC16F18075.
+The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins on the PIC16F18075 while the RTS, RXD, RST, and SW_RST pins are configured as output pins.
 
 Figure 1 shows the connections made between the Cap Touch Click, the RN4678 Bluetooth Click, and the PIC16F18075 for the door module.
 
+![Door Module - Wiring Diagram](images/Full_Door_Module_to_PIC_Connections.png)
 *Figure 1 - Door Module Circuit Diagram*
 
 
-![Door Module - Wiring Diagram](images/Full_Door_Module_to_PIC_Connections.png)
-
 ### Desk Module Wiring
-The Desk Module includes the Adafruit NeoPixel and one RN4678 Bluetooth Click. The RN4678 Bluetooth Click is used to receive the signal from the Door Module when somebody presses the capacitive touch button.  The Adafruit NeoPixel is used to get the attention of the person inside of the cubicle when a signal is received from the Bluetooth module indicating that somebody pressed the capacitive touch button.
+The Desk Module includes the Adafruit NeoPixel Stick and one RN4678 Bluetooth Click. The RN4678 Bluetooth Click is used to receive the signal from the Door Module when somebody presses the capacitive touch button; thehe Adafruit NeoPixel is then flashes to get the attention of the person inside of the cubicle.
 
-The Adafruit NeoPixel connects to the PIC16F18075 by connecting the DIN pin to any output pin of the microcontroller. In this example, RA0 was selected as the output pin. A 4-pin header will need to be soldered onto the back of the Adafruit NeoPixel before connecting to the PIC16F18075.  Figure 2 shows where to connect the 4-pin header (see the red box).
+The Adafruit NeoPixel Stick connects to the PIC16F18075 by connecting the DIN pin to any output pin of the microcontroller. In this example, RA0 was selected as the output pin. A 4-pin header will need to be soldered onto the back of the Adafruit NeoPixel before connecting to the PIC16F18075.  Figure 2 shows where to connect the 4-pin header (see the red box).
 
-
-*Figure 2 - Adafruit NeoPixel - back side*
 
 ![Adafruit NeoPixel - back side](images/Adafruit_NeoPixel_back_side.png)
+*Figure 2 - Adafruit NeoPixel - back side*
+
 
 Note: The image above has the power pin labeled as "5VDC", however for this demonstration it will be run at 3.3VDC.
 
-The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD, TXD, RST, and SW_RST pins. The CTS and TXD pins are configured as input pins while the RTS, RXD, RST, and SW_RST pins are configured as output pins.
+The RN4678 Bluetooth Click connects to the PIC16F18075 the same way as on the door module.
 
-Figure 3 shows the connections made between the Adafruit NeoPixel and RN4678 Bluetooth Click and the PIC16F18075 for the desk module.
-
-
-
-*Figure 3 - Desk Module Circuit Diagram*
-
+Figure 3 shows the connections made between the Adafruit NeoPixel Stick, RN4678 Bluetooth Click, and the PIC16F18075 for the desk module.
 
 ![Desk Module - Wiring Diagram](images/Full_Desk_Module_to_PIC_Connections.png)
+*Figure 3 - Desk Module Circuit Diagram*
 
 
 ## Setup - Programming
@@ -202,4 +197,4 @@ The RN4678 Bluetooth Click has many different settings that are not described wi
 4. Now follow the instructions used with the command guide for changing any of the settings.  The command guide can be found above under the link labeled 'RN4678 User Guide'.
      
 ## Summary
-This example has shown how to use a Cap Touch Click, an AdaFruit NeoPixel, and 2 RN4678 Bluetooth Click modules to create a Cubicle Doorbell system that uses the PIC16F18075 device.
+This example has shown how to use a Cap Touch Click, an AdaFruit NeoPixel, and 2 RN4678 Bluetooth Click modules to create a Cubicle Doorbell system that uses the PIC16F18075.

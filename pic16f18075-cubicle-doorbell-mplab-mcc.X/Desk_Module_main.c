@@ -20,6 +20,8 @@
 */
 #include "mcc_generated_files/system/system.h"
 
+#define NUM_FLASHES 3 // number of times LED array flashes
+
 /*********NEOPIXEL FUNCTIONS************/
 //Send a 1-code, a HIGH, using the correct timing to the NeoPixel
 void onePulse(void){
@@ -181,9 +183,9 @@ int main(void)
     {
         payload= EUSART1_Read();
         __delay_ms(10);
-        //Check to see if the payload is 1 AKA the doorbell has been pressed and blink the LED strip on and off 5 times 
+        //Check to see if the payload is 1 AKA the doorbell has been pressed and blink the LED strip on and off NUM_FLASHES times 
         if(payload == '1'){ 
-            for (uint8_t i = 0; i < 5; i++){
+            for (uint8_t i = 0; i < NUM_FLASHES; i++){
                 RED_BLINK_500ms();
             }
         }

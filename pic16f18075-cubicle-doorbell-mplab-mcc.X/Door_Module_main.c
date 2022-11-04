@@ -55,6 +55,7 @@ int main(void)
     while (1)
     {
         if (PORTBbits.RB0 == HIGH){ 
+            while(PORTBbits.RB0 == HIGH); // wait for button to be released
             __delay_ms(10);
             payload = '1';
             EUSART1_Write(payload);
