@@ -36,7 +36,7 @@
                 "versionRange": "*"
             }
         },
-        "author": ["Jonah Lerner", "Josh Booth"],
+        "author": ["Jonah Lerner & Josh Booth"],
         "peripherals": ["EUSART"],
         "keywords": ["EUSART", "Bluetooth", "LED", "Capacitive Touch", "MCC"],
         "additionalData": {
