@@ -9,7 +9,7 @@ This example shows how to configure the MikroElektronika Cap Touch Click Board, 
 ## Related Documentation
 
 - [PIC16F18075 Data Sheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC16F18054-55-74-75-28-40-Pin-Micorocontroller-Data-Sheet-40002338.pdf)
-- [PIC16F18075 Family Product Page](https://www.microchip.com/wwwproducts/en/PIC16F18075)
+- [PIC16F18075 Family Product Page](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/pic16f18076?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github)
 - [Wireless Cubicle Doorbell Application Note](https://www.microchip.com/en-us/application-notes/an3313)
 - [RN4678 User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/RN4678-Bluetooth-Dual-Mode-Module-Command-Reference-User-Guide-DS50002506C.pdf)
 
@@ -17,16 +17,15 @@ This example shows how to configure the MikroElektronika Cap Touch Click Board, 
 
 ## Software Used
 
-- [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) **6.00** or newer
-- [MPLAB Xpress IDE](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xpress) (alternative to MPLAB® X IDE) 
-- [MPLAB XC8](http://www.microchip.com/mplab/compilers) **2.36** or a newer compiler 
-- [MPLAB Code Configurator (MCC)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **5.1.0** or newer 
-- [MPLAB Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) **2.1.12** or newer 
+- [MPLAB® X IDE](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github) **6.00** or newer
+- [MPLAB XC8](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github) **2.36** or a newer compiler 
+- [MPLAB Code Configurator (MCC)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github) **5.1.0** or newer 
+- [MPLAB Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github) **2.1.12** or newer 
 - [Microchip PIC16F1xxxx Series Device Support pack](https://packs.download.microchip.com/) **1.10.174** or newer Device Pack
 
 ## Hardware Used
-- [PIC16F18075](https://www.microchip.com/en-us/product/pic16f18075) x2
-- [Curiosity HPC Development Board](https://www.microchip.com/en-us/development-tool/dm164136) x2
+- [PIC16F18075](https://www.microchip.com/en-us/product/pic16f18075?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github) x2
+- [Curiosity HPC Development Board](https://www.microchip.com/en-us/development-tool/DM164136?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github) x2
 - [RN4678 Bluetooth Click](https://www.mikroe.com/rn4678-click) x2
 - [Cap Touch Click](https://www.mikroe.com/cap-touch-click)
 - [Adafruit NeoPixel](https://www.adafruit.com/product/1426)
