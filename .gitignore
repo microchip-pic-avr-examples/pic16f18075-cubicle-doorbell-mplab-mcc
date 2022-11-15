@@ -2,5 +2,14 @@
 /**/build/*
 /**/nbproject/*
 !/**/nbproject/*.xml
-/**/dist/*
+/**/[Ff]ree_desk/production/*
+/**/[Ff]ree_door/production/*
+/**/[Pp]ro_desk/production/*
+/**/[Pp]ro_door/production/*
 /**/.generated_files/*
+
+# Uncomment these to include hex/elf files
+!/**/[Ff]ree_desk/production/*.hex
+!/**/[Ff]ree_door/production/*.hex
+!/**/[Pp]ro_desk/production/*.hex
+!/**/[Pp]ro_door/production/*.hex

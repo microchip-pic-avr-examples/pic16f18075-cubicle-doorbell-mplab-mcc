@@ -45,19 +45,18 @@ The RN4678 Bluetooth Click connects to the PIC16F18075 through the RTS, CTS, RXD
 
 Figure 1 shows the connections made between the Cap Touch Click, the RN4678 Bluetooth Click, and the PIC16F18075 for the door module.
 
-![Door Module - Wiring Diagram](images/Full_Door_Module_to_PIC_Connections.png)
 *Figure 1 - Door Module Circuit Diagram*
 
+![Door Module - Wiring Diagram](images/Full_Door_Module_to_PIC_Connections.png)
 
 ### Desk Module Wiring
 The Desk Module includes the Adafruit NeoPixel Stick and one RN4678 Bluetooth Click. The RN4678 Bluetooth Click is used to receive the signal from the Door Module when somebody presses the capacitive touch button; the Adafruit NeoPixel Stick then flashes to get the attention of the person inside of the cubicle.
 
 The Adafruit NeoPixel Stick connects to the PIC16F18075 by connecting the DIN pin to any output pin of the microcontroller. In this example, RA0 was selected as the output pin. A 4-pin header will need to be soldered onto the back of the Adafruit NeoPixel before connecting to the PIC16F18075.  Figure 2 shows where to connect the 4-pin header (see the red box).
 
-
-![Adafruit NeoPixel - back side](images/Adafruit_NeoPixel_back_side.png)
 *Figure 2 - Adafruit NeoPixel - back side*
 
+![Adafruit NeoPixel - back side](images/Adafruit_NeoPixel_back_side.png)
 
 Note: The image above has the power pin labeled as "5VDC", however for this demonstration it will be run at 3.3VDC.
 
@@ -65,9 +64,9 @@ The RN4678 Bluetooth Click connects to the PIC16F18075 the same way as on the do
 
 Figure 3 shows the connections made between the Adafruit NeoPixel Stick, RN4678 Bluetooth Click, and the PIC16F18075 for the desk module.
 
-![Desk Module - Wiring Diagram](images/Full_Desk_Module_to_PIC_Connections.png)
 *Figure 3 - Desk Module Circuit Diagram*
 
+![Desk Module - Wiring Diagram](images/Full_Desk_Module_to_PIC_Connections.png)
 
 ## Setup - Programming
 ### Door/Desk Module Environment Setup

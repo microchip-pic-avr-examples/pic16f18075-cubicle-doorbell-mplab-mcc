@@ -21,6 +21,7 @@
 #include "mcc_generated_files/system/system.h"
 
 #define NUM_FLASHES 3 // number of times LED array flashes
+#define NUM_LEDS 5 // number of LEDs used
 
 /*********NEOPIXEL FUNCTIONS************/
 //Send a 1-code, a HIGH, using the correct timing to the NeoPixel
@@ -85,28 +86,19 @@ void LED_Array(unsigned char R, unsigned char G, unsigned char B){
     ws_send_byte(R);
     ws_send_byte(B);
 }
+
 //Make all 8 LEDs turn to the brightest Red possible
 void RED(){
-    LED_Array(255, 0, 0);
-    LED_Array(255, 0, 0);
-    LED_Array(255, 0, 0);
-    LED_Array(255, 0, 0);
-    LED_Array(255, 0, 0);
-    LED_Array(255, 0, 0);
-    LED_Array(255, 0, 0);
-    LED_Array(255, 0, 0);
+    for(int i = 0; i < NUM_LEDS; i++){
+        LED_Array(255, 255, 255);
+    }
     __delay_ms(10);
 }
 //Turn all 8 LEDs off
 void OFF(){
-    LED_Array(0, 0, 0);
-    LED_Array(0, 0, 0);
-    LED_Array(0, 0, 0);
-    LED_Array(0, 0, 0);
-    LED_Array(0, 0, 0);
-    LED_Array(0, 0, 0);
-    LED_Array(0, 0, 0);
-    LED_Array(0, 0, 0);
+    for(int i = 0; i < NUM_LEDS; i++){
+        LED_Array(0, 0, 0);
+    }
     __delay_ms(10);
 }
 //All 8 LEDs blink Red and then turn off at a 500ms interval
