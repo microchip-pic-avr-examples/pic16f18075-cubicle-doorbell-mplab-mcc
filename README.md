@@ -58,8 +58,6 @@ The Adafruit NeoPixel Stick connects to the PIC16F18075 by connecting the DIN pi
 
 ![Adafruit NeoPixel - back side](images/Adafruit_NeoPixel_back_side.png)
 
-Note: The image above has the power pin labeled as "5VDC", however for this demonstration it will be run at 3.3VDC.
-
 The RN4678 Bluetooth Click connects to the PIC16F18075 the same way as on the door module.
 
 Figure 3 shows the connections made between the Adafruit NeoPixel Stick, RN4678 Bluetooth Click, and the PIC16F18075 for the desk module.
@@ -118,7 +116,7 @@ There are 7 custom-written functions used to control the NeoPixel in this exampl
 | ```LED_Array(R, G, B)```|Input the values R,G,B (max of 255) to set the brightness for each color for an individual LED. Sends in the correct order so the NeoPixel can understand|
 | ``` RED() ```   | Make all 8 LEDs turn to the brightest Red possible        |
 | ``` OFF() ```   | Turn all 8 LEDs off        |
-| ``` RED_BLINK_500ms ```| All 8 LEDs blink Red and then turn off at a 500ms interval        |
+| ``` RED_BLINK_500ms() ```| All 8 LEDs blink Red and then turn off at a 500ms interval        |
 
 #### RN4678 Functions
 There are 5 custom written functions used to control the RN4678 in this example. Each function and description is listed in Table 3. These functions can be found within both the Desk_Module_main.c file and the Door_Module_main.c file.
