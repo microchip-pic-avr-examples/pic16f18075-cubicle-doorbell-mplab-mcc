@@ -61,7 +61,5 @@ int main(void)
             EUSART1_Write(payload);
             __delay_ms(10);
         }
-        else{
-        }
     }    
 }

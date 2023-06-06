@@ -21,7 +21,7 @@
 #include "mcc_generated_files/system/system.h"
 
 #define NUM_FLASHES 3 // number of times LED array flashes
-#define NUM_LEDS 5 // number of LEDs used
+#define NUM_LEDS 8 // number of LEDs used
 
 /*********NEOPIXEL FUNCTIONS************/
 //Send a 1-code, a HIGH, using the correct timing to the NeoPixel
@@ -90,7 +90,7 @@ void LED_Array(unsigned char R, unsigned char G, unsigned char B){
 //Make all 8 LEDs turn to the brightest Red possible
 void RED(){
     for(int i = 0; i < NUM_LEDS; i++){
-        LED_Array(255, 255, 255);
+        LED_Array(255, 0, 0);
     }
     __delay_ms(10);
 }
@@ -162,27 +162,28 @@ void BT_connect(void){
 int main(void)
 {
     SYSTEM_Initialize();
-    BT_initialConditions();
-    BT_initialize();
-    
-    BT_enterCommandMode();
-    BT_scan();
-    BT_connect();
-    __delay_ms(2000);
+//    BT_initialConditions();
+//    BT_initialize();
+//    
+//    BT_enterCommandMode();
+//    BT_scan();
+//    BT_connect();
+    //__delay_ms(10000);
     
     uint8_t payload = 0;
     while(1)
     {
-        payload= EUSART1_Read();
+        //payload= EUSART1_Read();
         __delay_ms(10);
         //Check to see if the payload is 1 AKA the doorbell has been pressed and blink the LED strip on and off NUM_FLASHES times 
-        if(payload == '1'){ 
+        //if(payload == '1'){ 
             for (uint8_t i = 0; i < NUM_FLASHES; i++){
                 RED_BLINK_500ms();
             }
-        }
-        else{
-            OFF();
-        }
+        __delay_ms(10000);
+//        }
+//        else{
+//            OFF();
+//        }
     }    
 }
