@@ -19,7 +19,7 @@ This example shows how to create a wireless, cubicle doorbell using a capacitve 
 - [MPLAB® X IDE](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github) **6.10** or newer
 - [MPLAB XC8](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github) **2.41** or a newer compiler 
 - [MPLAB Code Configurator (MCC)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github) **5.7.7** or newer 
-- [MPLAB Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github) **2.1.12** or newer 
+- [MPLAB Melody Library](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic16f18076&utm_content=pic16f18075-cubicle-doorbell-mplab-mcc-github) **2.5.0** or newer 
 - [Microchip PIC16F1xxxx Series Device Support pack](https://packs.download.microchip.com/) **1.18.352** or newer Device Pack
 
 ## Hardware Used
